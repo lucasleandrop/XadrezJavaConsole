@@ -8,6 +8,7 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
+import java.util.zip.CheckedInputStream;
 
 public class UI {
 
@@ -59,6 +60,9 @@ public class UI {
         System.out.println();
         System.out.println("Turno : " + chessMatch.getTurn());
         System.out.println("Esperando o jogador: " + chessMatch.getCurrentPlayer());
+        if (chessMatch.getCheck()){
+            System.out.println("Check!");
+        }
     }
 
 
