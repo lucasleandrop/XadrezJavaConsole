@@ -38,6 +38,11 @@ public class Main {
                 if (capturedPice != null){
                     captured.add(capturedPice);
                 }
+                if (chessMatch.getPromoted() != null){
+                    System.out.print("Digite a promoção para a peça (B/N/R/Q) :");
+                    String type = sc.nextLine();
+                    chessMatch.replacePromotedPiece(type);
+                }
             } catch (ChessException e){
                 System.out.println(e.getMessage());
                 sc.nextLine();
